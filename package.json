@@ -12,7 +12,6 @@
   "scripts": {
     "test": "npm run test-cli -- --name create-test --description test --license MIT",
     "lint": "eslint .",
-    "format": "prettier . --check",
     "prepack": "npm run build",
     "build": "tsc --build",
     "test-cli": "rm -Rf test-out && ts-node src/cli.ts test-out",
@@ -23,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beuluis/create-something.git"
+    "url": "git+https://github.com/Beuterei/create-something.git"
   },
   "author": "Luis Beu <me@luisbeu.de> (https://luisbeu.de/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/beuluis/create-something/issues"
+    "url": "https://github.com/Beuterei/create-something/issues"
   },
-  "homepage": "https://github.com/beuluis/create-something#readme",
+  "homepage": "https://github.com/Beuterei/create-something#readme",
   "dependencies": {
     "@beuluis/create-helper": "^1.1.1",
     "package-name-regex": "^2.0.6"
@@ -38,13 +37,11 @@
   "devDependencies": {
     "@beuluis/eslint-config": "1.0.2",
     "@beuluis/hook-cli": "1.1.4",
-    "@beuluis/prettier-config": "2.0.1",
     "@types/node": "18.7.18",
     "@types/package-name-regex": "2.0.0",
     "eslint": "8.23.1",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
-    "np": "7.6.2",
     "ts-node": "10.9.1",
     "typescript": "4.8.3"
   },
@@ -55,18 +52,9 @@
     "initializer",
     "helper"
   ],
-  "prettier": "@beuluis/prettier-config",
   "lint-staged": {
-    "*.md": [
-      "prettier --write"
-    ],
     "*.{js,ts,json,yml,yaml}": [
-      "prettier --write",
       "eslint"
     ]
-  },
-  "np": {
-    "tests": false,
-    "publish": false
   }
 }

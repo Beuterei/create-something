@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { resolve } from 'path';
 import { create } from '@beuluis/create-helper';
 import packageNameRegex from 'package-name-regex';
+import { resolve } from 'path';
 
 void create({
     templatesDirectory: resolve(__dirname, '..', 'templates'),
